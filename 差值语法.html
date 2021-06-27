@@ -30,6 +30,19 @@ vue模板语法有两大类：
         <h1>指令语法</h1>
 
         <a v-bind:href="url">百度一下</a>
+
+
+
+
+        <hr>
+        <h1>单向数据绑定:<input type="text" :value="msg" /></h1>
+        <h1>双向数据绑定:<input type="text" v-model="msg" /></h1>
+        <hr>
+        <textarea name="" id="" cols="30" rows="10">
+                {{msg}}
+
+
+        </textarea>
     </div>
 
 
@@ -40,7 +53,7 @@ vue模板语法有两大类：
             el: '#app',
             data: {
                 url: 'http://www.baidu.com',
-                msg: 'askjhashkjhssssssssssssssssss'
+                msg: 'lihaojie'
             }
 
         })
