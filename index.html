@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,38 @@
     <title>我的VUE</title>
     <script src="./js/vue.js"></script>
 </head>
+
 <body>
     <div id="app">
-        <p >{{earth.msg}}</p>
+        <p>{{earth.msg}}</p>
 
         <h1>我主宰啊:{{earth.address}}</h1>
+        <hr>
+        <h2>我学的是：{{earth.subject()}}</h2>
+
+
+        <hr>
+
+        <h1>{{earth.msg,earth.address}}</h1>
+
+        <h1>{{earth.msg && earth.address}}</h1>
+
     </div>
 
 
     <script>
         const vm = new Vue({
-            el:'#app',
-            data:{
-                earth:{
-                    msg:'Hello World hello vue !!!',
-                    address:'宇宙我是一个小可爱！'
+            el: '#app',
+            data: {
+                earth: {
+                    msg: 'Hello World hello vue !!!',
+                    address: '宇宙我是一个小可爱！',
+                    subject:()=>'前端'
                 }
-                
+
             }
         })
     </script>
 </body>
+
 </html>
