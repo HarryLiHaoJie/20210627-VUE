@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="app">
-        <p>{{msg}}</p>
+        <p >{{earth.msg}}</p>
+
+        <h1>我主宰:{{earth.address}}</h1>
     </div>
 
 
@@ -17,7 +19,11 @@
         const vm = new Vue({
             el:'#app',
             data:{
-                msg:'Hello World hello vue !!!'
+                earth:{
+                    msg:'Hello World hello vue !!!',
+                    address:'宇宙'
+                }
+                
             }
         })
     </script>
