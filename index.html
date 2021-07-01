@@ -24,6 +24,14 @@
 
         <h1>{{earth.msg && earth.address}}</h1>
 
+        <hr>
+
+        <h1>
+
+            我是一个{{honey?'小可爱':'小宝贝' }}啊
+
+        </h1>
+        <button v-on:click="bian()">点我变身</button>
     </div>
 
 
@@ -34,7 +42,17 @@
                 earth: {
                     msg: 'Hello World hello vue !!!',
                     address: '宇宙我是一个小可爱！',
-                    subject:()=>'前端'
+                    subject: () => '前端',
+                   
+                },
+                honey: true
+
+            },
+
+            methods: {
+                bian() {
+                   vm.honey = !vm.honey;
+
                 }
 
             }
