@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <img :src="src" alt="我是图片一" width="900px" height="600">
+        <button v-for='item,index in list' @click = 'changePic(index)'>{{index + 1}}</button>
+    </div>
+    <script>
+
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    src:'https://t7.baidu.com/it/u=2529476510,3041785782&fm=193&f=GIF',
+                    list: [
+                        'https://t7.baidu.com/it/u=2529476510,3041785782&fm=193&f=GIF',
+                        'https://t7.baidu.com/it/u=727460147,2222092211&fm=193&f=GIF',
+                        'https://t7.baidu.com/it/u=2511982910,2454873241&fm=193&f=GIF',
+                        'https://t7.baidu.com/it/u=825057118,3516313570&fm=193&f=GIF'
+                    ]
+                }
+            },
+            methods:{
+                changePic(i){
+                    this.src = this.list[i]
+                }
+
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

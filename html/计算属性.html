@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="root">
+
+        姓：<input type="text" placeholder="请输入" v-model='firstName'><br>
+        名：<input type="text" placeholder="qingshuru" v-model='lastName'> <br>
+
+        <span>全名：{{fullName}}</span>
+
+
+    </div>
+
+    <script>
+
+        new Vue({
+
+            el: '#root',
+            data: {
+                firstName: '张',
+                lastName: '三',
+
+            },
+            computed:{
+                fullName(){
+                    return this.firstName +'-'+this.lastName;
+                }
+
+            }
+           /*
+            methods: {
+                getFullName() {
+                    return this.firstName + '-' + this.lastName;
+                }
+
+            }
+           */
+
+
+
+
+        })
+
+
+
+    </script>
+
+
+
+    <script>
+
+
+        let p = {
+
+            firstName1: '李',
+            lastName1: '四'
+        }
+
+
+        Object.defineProperty(p, 'fallName', {
+            set(value) {
+                const arr = value.split('-');
+                this.firstName1 = arr[0],
+                    this.lastName1 = arr[1]
+            },
+            get() {
+                return this.firstName1 + '-' + this.lastName1;
+            }
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
