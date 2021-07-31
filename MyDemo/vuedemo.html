@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        这是插值语法you know！
+        <h2>{{msg}}</h2>
+
+        <h1>{{name}}</h1>
+
+
+        <h2>列表展示</h2>
+        <ul>
+            <li v-for='item in list'>{{item}}</li>
+        </ul>
+
+        <h1>计数器展示</h1>
+        <span>
+            <h4>当前计数是:{{num}}</h4>
+        </span><br>
+        <button v-on:click='add'>加</button>
+        <button v-on:click='del'>减</button>
+
+
+    </div>
+
+
+</body>
+<script>
+    //let 变量  const 常量
+    const vm = new Vue({ //创建了一个vue的实例
+        el: '#app', //用于挂载要管理的元素
+        fiults: [],
+        data: {
+            num: 0,
+            msg: 'hello world!!!',
+            name: 'wo shi haoren !',
+            list: [
+                '苹果', '香蕉', '梨子'
+            ]
+
+        },
+        methods: {
+            add() {
+                this.num++
+                if (this.num > 10) {
+                    this.msg = '哇哦！你真聪明'
+                } else {
+                    this.msg = this.name
+                }
+            },
+            del() {
+                this.num--
+            }
+        }
+    })
+
+
+</script>
+
+</html>

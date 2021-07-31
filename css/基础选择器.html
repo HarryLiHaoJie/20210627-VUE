@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        div {
+
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+            font-style: italic;
+        }
+
+        .font20 {
+            color: blue;
+        }
+
+        .sui {
+            /* font-style: italic;
+            font-weight: 900;
+            font-size: 16px;
+            font-family: '宋体';
+            复合属性：简写的方式 
+
+            font:font-style font-weight font -size/font-height font-family*/
+            font: italic 700 20px '宋体';
+
+        }
+
+        ol li {
+            color: pink;
+        }
+
+        ul li {
+            color: green;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-style: 30px;
+            color: red;
+        }
+
+        p>a {
+            color: rosybrown;
+        }
+    </style>
+</head>
+<!-- /**
+* 基础选择器描述
+* 标签选择器   类选择器   id选择器    通配符选择器
+*
+** / -->
+
+<body>
+    <!-- 类选择器 -->
+    <div class="red">红色</div>
+    <div class="green">绿色</div>
+    <div class="red">红色</div>
+
+    <!-- 类选择器多类名选择器 -->
+    <div class="font20 yellow">刘德华</div>
+    <div class="font20 yellow">刘德华</div>
+
+    删除当前行是 shift+del
+    复制当前行是 shift+alt+d
+
+
+    <span class="sui">三生三世十里桃花，一心一意百行代码</span>
+
+
+    这里是后代选择器
+    <ol>
+        <li>wo shi ol</li>
+        <li>wo shi ol</li>
+        <li>wo shi ol</li>
+    </ol>
+
+
+    <ul>
+        <li>wo shi ul</li>
+        <li>wo shi ul</li>
+        <li>wo shi ul</li>
+        <li>wo shi ul</li>
+        <li><a href="#">我是孙子</a></li>
+
+    </ul>
+
+
+
+
+    <div><a href="">我是儿子</a>
+        <p><a href="">我是孙子</a></p>
+    </div>
+
+
+    并集选择器是用英文逗号来进行分隔, div,<span></span>
+</body>
+<script>
+
+</script>
+
+</html>
