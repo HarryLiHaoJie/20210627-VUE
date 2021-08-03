@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+        background-image: url('https://game.gtimg.cn/images/yxzj/web201706/images/comm/logo.png');
+    }
+
+    .image1 {
+        width: 300px;
+        height: 300px;
+        background-image: url('https://game.gtimg.cn/images/yxzj/web201706/images/comm/logo.png');
+        /* 图片不平铺 */
+        background-repeat: no-repeat;
+    }
+
+    .image2 {
+        width: 300px;
+        height: 300px;
+        background-image: url('https://game.gtimg.cn/images/yxzj/web201706/images/comm/logo.png');
+        /* 图片不平铺 */
+        background-repeat: no-repeat;
+        background-position: top center;
+
+    }
+
+    .jz {
+        width: 120px;
+        height: 40px;
+        background-color: pink;
+        line-height: 40px;
+        font-size: 14px;
+        font-weight: normal;
+        background: cover;
+        text-indent: 2em;
+        background-image: url('https://img.alicdn.com/tps/TB1ld1GNFXXXXXLapXXXXXXXXXX-200-200.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+
+    }
+
+    body {
+        background-image: url('https://game.gtimg.cn/images/yxzj/act/6227/a20210716holiday/pc/top.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* background: rgba(0, 0, 0, 0.4) */
+    }
+</style>
+
+<body>
+    <h1>背景颜色 background-color</h1>
+    <div class="red"></div>
+    <h1>背景图片 background-image</h1>
+    <div class="image"></div>
+    <h1>上面图片平铺 background-repate</h1>
+    <div class="image1"></div>
+    <h1>背景图片定位 background-position</h1>
+    <div class="image2"></div>
+
+
+    <h3 class="jz">
+
+        成长守护平台
+    </h3>
+
+
+    <div class="bak"></div>
+</body>
+
+</html>

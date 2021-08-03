@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<style>
+    .active {
+        color: red;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <!-- 对象语法 传入的是class属性的对象 -->
+        <h1 :class="{active:isActive,line:isLine}">{{msg}}</h1> <button @click="tabs">切换颜色</button>
+    </div>
+</body>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '你好呀',
+            isActive: true,
+            isLine: true
+        },
+        methods: {
+            tabs() {
+                this.isActive = !this.isActive
+            }
+        }
+    })
+
+</script>
+
+</html>
